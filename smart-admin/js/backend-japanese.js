@@ -48,7 +48,7 @@ kanjiWord = {
 			if( lastRow.length > 1 ){
                 lastRow = lastRow.last();
 			}
-			console.log("add word click",{lastRow});
+
 			if( lastRow.find('input.words-romaji').length > 0 &&
 				lastRow.find('input.words-romaji').val().length > 0 ){
                 var row = lastRow.clone();
@@ -63,6 +63,10 @@ kanjiWord = {
 
                 jQuery(".vietnamese-input",row).on('keypress',function (evt) {
                     g_vietTyper.targetOnKeyPress( evt, this );
+                });
+
+                jQuery("input.words-romaji").on('change',function(){
+                    kanjiWord.getByRomaji($(this).val(),kanjiWord.bindData,$(this).closest(".row"));
                 });
 			}
 
