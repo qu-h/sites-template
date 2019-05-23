@@ -1149,25 +1149,13 @@ let ckEditerConfig = {
     removePlugins : 'resize',
     disableAutoInline : true,
 
-    allowedContent : 'img[!src,alt,width,height,data-src,class]{float};', // Note no {width,height}
-    //allowedContent : 'img[!src,!class,class]{*}',
-    disallowedContent : '*[on*]',
+    //allowedContent : 'img[!src,alt,width,height,data-src,class]{float};', // Note no {width,height}
+    ignoreEmptyParagraph: false,
+    allowedContent : true,
+    extraAllowedContent : '*(*)',
+    //disallowedContent : '*[on*]',
     on: {
         instanceReady: function (evt ) {
-            console.log('in ready',{evt} );
-            evt.editor.dataProcessor.htmlFilter.addRules( {
-                elements: {
-                    img: function( el ) {
-                        console.log('debug img',{el});
-                        // Add an attribute.
-                        //if ( !el.attributes.alt )
-                            //el.attributes.alt = 'An image';
-
-                        // Add some class.
-                        el.addClass( 'img-responsive2' );
-                    }
-                }
-            } );
         }
     }
 
@@ -1231,6 +1219,7 @@ $( document ).ready(function() {
 
     });
 	pasteClipboard();
+	footerFixed();
 });
 
 function pasteClipboard() {
@@ -1247,6 +1236,20 @@ function pasteClipboard() {
 				})
 		});
 	}
+}
+
+function footerFixed() {
+	var contentArea = jQuery(".smart-form-editor"), footer = jQuery(".smart-form-editor footer").get(0);
+	$(footer).css({'position':'absolute','top':0,'width':'100%'});
+
+	$(window).scroll(function() {
+		var footerToTop = $(window).scrollTop() + $(window).height() - footer.offsetHeight - contentArea.offset().top;
+		if ( footerToTop > 0  ) {
+			$(footer).css('top',footerToTop);
+		} else {
+			$(footer).css('top',0);
+		}
+	});
 
 }
 
