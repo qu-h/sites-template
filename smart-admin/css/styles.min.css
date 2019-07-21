@@ -6872,15 +6872,18 @@ body:not(.menu-on-top) .nav-demo-btn {
 .select2-drop-multi .select2-results .level-1 {
   font-weight: bold; }
 
-.select2-drop-multi .select2-results .level-2 .select2-result-label:before {
+.select2-drop-multi .select2-results .level-2 .select2-result-label:before, .select2-drop-multi .select2-results .level-3 .select2-result-label:before, .select2-drop-multi .select2-results .level-4 .select2-result-label:before {
   content: ' ';
-  display: inline-block;
+  display: inline-block; }
+
+.select2-drop-multi .select2-results .level-2 .select2-result-label:before {
   width: 15px; }
 
 .select2-drop-multi .select2-results .level-3 .select2-result-label:before {
-  content: ' ';
-  display: inline-block;
   width: 30px; }
+
+.select2-drop-multi .select2-results .level-4 .select2-result-label:before {
+  width: 45px; }
 
 .table td [class^="tb-"] {
   display: inline-block;
