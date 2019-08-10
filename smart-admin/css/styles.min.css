@@ -6945,6 +6945,16 @@ body:not(.menu-on-top) .nav-demo-btn {
     font-size: 50px;
     margin: calc(50% - 20px); }
 
+/*
+Fix
+ */
+.smart-form .input .icon-prepend + textarea.form-control {
+  padding-left: 37px; }
+
+/*
+Fix Editor.md Auto Height
+ */
+
 @charset "UTF-8";
 /*!
  * SmartAdmin - Responsive WebApp
