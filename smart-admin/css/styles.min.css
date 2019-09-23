@@ -6869,6 +6869,9 @@ body:not(.menu-on-top) .nav-demo-btn {
   .smart-form .select .icon-prepend + .select2-container .select2-choices {
     padding-left: 30px; }
 
+.smart-form input[type=text]:read-only {
+  background-color: #eeeeee; }
+
 .select2-drop-multi .select2-results .level-1 {
   font-weight: bold; }
 
