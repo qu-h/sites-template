@@ -6850,11 +6850,16 @@ body:not(.menu-on-top) .nav-demo-btn {
   outline: 0;
   background-color: #428bca; }
 
+.smart-form .help-block {
+  font-size: 80%; }
+
 .smart-form .toggle.input-public {
   min-height: 30px; }
   .smart-form .toggle.input-public i {
     width: 80px;
     height: 20px; }
+    .smart-form .toggle.input-public i.f-left {
+      right: unset; }
     .smart-form .toggle.input-public i:after {
       line-height: 14px; }
     .smart-form .toggle.input-public i:before {
