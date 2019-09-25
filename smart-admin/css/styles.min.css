@@ -6962,6 +6962,15 @@ Fix
 /*
 Fix Editor.md Auto Height
  */
+.label-normal {
+  font-size: 100%;
+  font-weight: normal; }
+
+.highlight.success {
+  background: yellow; }
+
+.label .highlight {
+  color: #0a0c0f; }
 
 @charset "UTF-8";
 /*!
