@@ -6850,11 +6850,16 @@ body:not(.menu-on-top) .nav-demo-btn {
   outline: 0;
   background-color: #428bca; }
 
+.smart-form .help-block {
+  font-size: 80%; }
+
 .smart-form .toggle.input-public {
   min-height: 30px; }
   .smart-form .toggle.input-public i {
     width: 80px;
     height: 20px; }
+    .smart-form .toggle.input-public i.f-left {
+      right: unset; }
     .smart-form .toggle.input-public i:after {
       line-height: 14px; }
     .smart-form .toggle.input-public i:before {
@@ -6868,6 +6873,9 @@ body:not(.menu-on-top) .nav-demo-btn {
   z-index: 99; }
   .smart-form .select .icon-prepend + .select2-container .select2-choices {
     padding-left: 30px; }
+
+.smart-form input[type=text]:read-only {
+  background-color: #eeeeee; }
 
 .select2-drop-multi .select2-results .level-1 {
   font-weight: bold; }
@@ -6954,6 +6962,15 @@ Fix
 /*
 Fix Editor.md Auto Height
  */
+.label-normal {
+  font-size: 100%;
+  font-weight: normal; }
+
+.highlight.success {
+  background: yellow; }
+
+.label .highlight {
+  color: #0a0c0f; }
 
 @charset "UTF-8";
 /*!
