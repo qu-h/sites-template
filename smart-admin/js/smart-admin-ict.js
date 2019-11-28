@@ -1192,6 +1192,69 @@ $(document).ready(function() {
     // };
 
 });
+let input_ict = {
+    init:()=>{
+        input_ict.input_group_select();
+        input_ict.input_group_add_button();
+    },
+
+    input_group_select:()=>{
+        jQuery('.input-group-select').each((i,e)=>{
+            let value = $('.input-group-select-value',e).val();
+            let option= $('.dropdown-menu',e);
+            jQuery('li a',option).each(function(i,opt) {
+                if( typeof opt.dataset.value !== 'undefined' && opt.dataset.value.toString() === value.toString()){
+                    $('.input-group-select-label',e).html(opt.innerText);
+                }
+                $(opt).unbind().bind('click',()=>{
+                    if( typeof this.dataset.value !== 'undefined' ){
+                        $('.input-group-select-value',e).val(this.dataset.value);
+                    }
+                    $('.input-group-select-label',e).html(this.innerText);
+                });
+            });
+        });
+    },
+
+    input_group_add_button:()=>{
+        let btn = $("button.btn-add-new");
+        if( btn.length < 1)
+            return false;
+
+        btn.unbind().bind('click',()=>{
+            let btn_form_group = btn.closest('.form-group');
+            let input_text_with_type_group = btn_form_group.prev('.form-group');
+            if( input_text_with_type_group.length > 0 ){
+                let input_text = input_text_with_type_group.clone();
+                let input_value = $('input[type=text]',input_text);
+                let input_type = $('.input-group-select-value',input_text),
+                    input_type_name = input_type.attr('name');
+                let input_value_name = input_value.attr('name');
+                let number = input_value_name.match(/\[(\d)\]/);
+
+                if( number.length > 1 ){
+                    let next_number = "["+( parseInt(number[1]) +1)+"]";
+                    input_type
+                        .attr('name',input_type_name.replace(number[0],next_number) )
+                        .val(0);
+                    input_value
+                        .attr('name',input_value_name.replace(number[0],next_number) )
+                        .val("");
+                }
+
+                $(input_text).insertBefore(btn_form_group);
+                input_ict.input_group_select();
+            }
+
+        });
+
+    }
+};
+
+$( document ).ready(function() {
+    input_ict.init();
+});
+
 /**
  *
  */

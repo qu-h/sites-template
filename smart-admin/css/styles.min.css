@@ -17585,10 +17585,12 @@ input[type="color"].ui-autocomplete-loading {
   background-position: 99% 50%;
   padding-right: 27px; }
 
-.input-group-addon .checkbox, .input-group-addon .radio {
-  min-height: 0px;
-  margin-right: 0px !important;
-  padding-top: 0; }
+.input-group-addon .checkbox,
+.input-group-addon .radio {
+  min-height: 0;
+  margin-right: 0 !important;
+  padding-top: 0;
+  margin-top: 0; }
 
 .input-group-addon label input[type="checkbox"].checkbox + span,
 .input-group-addon label input[type="radio"].radiobox + span,
@@ -47957,10 +47959,12 @@ input[type="color"].ui-autocomplete-loading {
   background-position: 99% 50%;
   padding-right: 27px; }
 
-.input-group-addon .checkbox, .input-group-addon .radio {
-  min-height: 0px;
-  margin-right: 0px !important;
-  padding-top: 0; }
+.input-group-addon .checkbox,
+.input-group-addon .radio {
+  min-height: 0;
+  margin-right: 0 !important;
+  padding-top: 0;
+  margin-top: 0; }
 
 .input-group-addon label input[type="checkbox"].checkbox + span,
 .input-group-addon label input[type="radio"].radiobox + span,
