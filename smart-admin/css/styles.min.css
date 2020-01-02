@@ -6910,6 +6910,9 @@ body:not(.menu-on-top) .nav-demo-btn {
 .table td .tb-categories {
   background-color: #3276b1; }
 
+.table td img.table-logo {
+  max-height: 30px; }
+
 .cke_textarea_inline {
   padding: 15px; }
   .cke_textarea_inline.cke_editable {
@@ -61545,6 +61548,9 @@ body:not(.menu-on-top) .nav-demo-btn {
 
 .table td .tb-categories {
   background-color: #3276b1; }
+
+.table td img.table-logo {
+  max-height: 30px; }
 
 .cke_textarea_inline {
   padding: 15px; }
