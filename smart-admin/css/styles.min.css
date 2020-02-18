@@ -6893,6 +6893,9 @@ body:not(.menu-on-top) .nav-demo-btn {
 .select2-drop-multi .select2-results .level-4 .select2-result-label:before {
   width: 45px; }
 
+.bootstrap-tagsinput {
+  margin-bottom: 5px; }
+
 .table td [class^="tb-"] {
   display: inline-block;
   padding: .2em .6em .3em;
@@ -61531,6 +61534,9 @@ body:not(.menu-on-top) .nav-demo-btn {
 
 .select2-drop-multi .select2-results .level-4 .select2-result-label:before {
   width: 45px; }
+
+.bootstrap-tagsinput {
+  margin-bottom: 5px; }
 
 .table td [class^="tb-"] {
   display: inline-block;
