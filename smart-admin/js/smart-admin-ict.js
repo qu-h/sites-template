@@ -1280,6 +1280,55 @@ $( document ).ready(function() {
     input_ict.init();
 });
 
+(function( $ ) {
+
+    $.fn.drivingSign = function() {
+        return this.each(function() {
+            let input = $(this);
+            showImages(input);
+            input.change(function(){
+                showImages(input);
+            });
+        });
+    };
+    
+    function showImages(input) {
+
+        let value = input.val();
+        let lines = value.split("\n");
+        let images = [];
+        lines.forEach(function(line){
+            if( line.length > 0 ){
+                let regex = line.match(/\[(.*?)\]/);
+                if( regex && regex.length > 1){
+                    let img = regex[1].replace('packaging-symbols','packaging');
+                    images.push(img);
+                }
+            }
+        });
+        if( images.length > 0){
+            let group = input.parents('.form-group');
+            if( $('.driving-sign-image',group).length>0 ){
+                $('.driving-sign-image',group).remove();
+            }
+            let row = $("<div>",{class:'row driving-sign-image'});
+            let col = 12/images.length;
+            images.forEach(function (img, i) {
+                let signCol = $("<div>",{class:`col-xs-${col} text-center`});
+                let image = $("<img>",{'src':`/${img}`, class:'img-responsive'});
+                if( images.length > 1){
+                    image.css({"max-width":150});
+                }
+                image.appendTo(signCol);
+
+                let label = img.includes("road-sign") ? 'Biển ' : 'Hình';
+                $("<h4>").text(`${label} ${i+1}`).appendTo(signCol);
+                signCol.appendTo(row);
+            });
+            group.prepend(row);
+        }
+    }
+}( jQuery ));
 /**
  *
  */
@@ -1466,9 +1515,10 @@ const ict = {
 	formOnKeydown:function () {
 		$(document).on('keydown', function(e) {
 			if( e.altKey === true ){
-				let saveBtn = jQuery("[name=submit][value=save]"),
-					submitBtn = jQuery("[name=submit][value=submit]"),
-					cancelBtn = jQuery("[name=submit][value=cancel]");
+				let saveBtn = jQuery("[type=submit][name=save]"),
+					submitBtn = jQuery("[type=submit][name=submit]"),
+					cancelBtn = jQuery("[type=submit][name=cancel]");
+
 				switch (e.keyCode) {
 					case 83: // S
 						if(saveBtn.length > 0){
@@ -1486,9 +1536,7 @@ const ict = {
 						}
 						break;
 				}
-				// console.warn('debug keydown',e.keyCode);
 			}
-
 		});
 	},
 

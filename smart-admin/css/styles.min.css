@@ -6916,6 +6916,12 @@ body:not(.menu-on-top) .nav-demo-btn {
 .table td img.table-logo {
   max-height: 30px; }
 
+@font-face {
+  font-family: 'Blue-Highway';
+  src: url("../fonts/Blue-Highway.ttf.woff") format("woff"), url("../fonts/Blue-Highway.ttf.svg#Blue-Highway") format("svg"), url("../fonts/Blue-Highway.ttf.eot"), url("../fonts/Blue-Highway.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
 .cke_textarea_inline {
   padding: 15px; }
   .cke_textarea_inline.cke_editable {
@@ -61557,6 +61563,12 @@ body:not(.menu-on-top) .nav-demo-btn {
 
 .table td img.table-logo {
   max-height: 30px; }
+
+@font-face {
+  font-family: 'Blue-Highway';
+  src: url("../fonts/Blue-Highway.ttf.woff") format("woff"), url("../fonts/Blue-Highway.ttf.svg#Blue-Highway") format("svg"), url("../fonts/Blue-Highway.ttf.eot"), url("../fonts/Blue-Highway.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
 
 .cke_textarea_inline {
   padding: 15px; }
