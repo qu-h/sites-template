@@ -1848,10 +1848,7 @@ S2.define('select2/results',[
 
   Results.prototype.append = function (data) {
     this.hideLoading();
-	
-	
-	console.log(`load result`,{data},this);
-	
+
     var $options = [];
 
     if (data.results == null || data.results.length === 0) {
@@ -1970,7 +1967,7 @@ S2.define('select2/results',[
       window.Element.prototype.msMatchesSelector ||
       window.Element.prototype.webkitMatchesSelector;
 
-    if ((data.element != null && matches.call(data.element, ':disabled')) ||
+    if ((data.element != null && typeof matches !== 'undefined' && matches.call(data.element, ':disabled')) ||
         (data.element == null && data.disabled)) {
       delete attrs['aria-selected'];
       attrs['aria-disabled'] = 'true';
