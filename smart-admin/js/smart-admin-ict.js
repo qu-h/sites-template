@@ -23075,8 +23075,6 @@ function pasteClipboard() {
 
 (function( $ ) {
     class TreeView {
-        data=[];
-        root=null;
         constructor(data, root) {
             this.data = data;
             this.root = root;
@@ -23084,18 +23082,19 @@ function pasteClipboard() {
             this.init();
         }
 
-        init= async ()=>{
+        async init() {
             await this.groupView();
             pageSetUp();
-        };
+        }
 
-        groupView=()=>{
-            this.data.forEach((data)=>{
-                this.groupNode(data);
+        groupView(){
+            let that = this;
+            this.data.forEach(function(data){
+                that.groupNode(data);
             });
         };
 
-        groupNode=(row)=>{
+        groupNode(row){
             let dataWiget = {
                 colorbutton:false,
                 editbutton:false,
@@ -23124,18 +23123,17 @@ function pasteClipboard() {
             this.root.append(container);
         };
 
-        groupHeader=(data)=>{
+        groupHeader(data){
             let header = $('<header/>');
             header.append(`<span class="widget-icon"> <i class="fa fa-comments"></i> </span>`);
             header.append(`<h2>${data.name}</h2>`);
             let btn = `<a href="${this.urlEdit.format(data.id)}" class="button-icon" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit"><i class="fa-edit fa"></i></a>`;
 
-
             header.append(`<div class="jarviswidget-ctrls">${btn} </div>`);
             return header;
         };
 
-        groupContent=(row)=>{
+        groupContent(row){
             let main = $(`<div/>`);
             let ctr = `<div class="jarviswidget-editbox"></div>`;
             main.append(ctr);
@@ -23162,11 +23160,10 @@ function pasteClipboard() {
             }
             main.append(body);
 
-
             return main;
         };
 
-        itemRender=(data)=>{
+        itemRender(data){
             let root = $(`<div/>`,{class:"dd-item","data-id":data.id});
             let body = $(` <div/>`,{class:"dd-handle"});
             let label = $(`<span/>`).html(data.title_sub ? data.title_sub : data.name);
@@ -23193,7 +23190,7 @@ function pasteClipboard() {
             return root;
         };
 
-        itemButton=(data)=>{
+        itemButton(data){
             let editStr = "Edit Concept %s";
             let opt = {
                 'class':'pull-right btn btn-xs',
