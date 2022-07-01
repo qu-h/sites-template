@@ -1,0 +1,466 @@
+// Yolo Header Mobile
+@media screen and (min-width: 992px) {
+    header.yolo-mobile-header {
+        display: none!important;
+    }
+}
+@media screen and (max-width: 991px) {
+    body {
+        .transition(all 0.3s);
+        position: relative;
+        left: 0;
+    }
+    .mobile-top-bar-hide, header.yolo-main-header {
+        display: none!important;
+    }
+    body.menu-mobile-in {
+        left: 280px;
+        overflow: hidden;
+    }
+    .container.yolo-mobile-header-wrapper {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header-mobile-before {
+        text-align: center;
+        img {
+            padding-top: var(--logo_mobile_padding);
+            padding-bottom: var(--logo_mobile_padding);
+            .box-sizing(content-box);
+        }
+    }
+    .header-logo-mobile {
+        vertical-align: middle;
+        text-align: center;
+        img {
+            max-height: 60px;
+            padding-top: var(--logo_mobile_padding);
+            padding-bottom: var(--logo_mobile_padding);
+            .box-sizing(border-box);
+        }
+    }
+    .toggle-icon-wrapper .toggle-icon {
+        display: inline-block;
+        height: 30px;
+        position: relative;
+        vertical-align: middle;
+        width: 30px;
+        cursor: pointer;
+        >span {
+            background: none repeat scroll 0 0 @black;
+            bottom: 0;
+            display: block;
+            height: 2px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80%;
+        }
+        &:before, &:after {
+            background: none repeat scroll 0 0 @black;
+            content: "";
+            height: 2px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            width: 80%;
+            bottom: 5px;
+        }
+        &:before {
+            top: 5px;
+            bottom: auto;
+        }
+        &:hover {
+            >span, &:before, &:after {
+                background-color: var(--primary_color);
+            }
+        }
+    }
+    header.yolo-mobile-header {
+        background: @white;
+        .header-left, .toggle-icon-wrapper.toggle-desktop, .header-customize {
+            display: none;
+        }
+        .yolo-header-container-wrapper {
+            .transition(all 0.3s ease);
+            background-color: @white;
+            z-index: 997;
+            top: 0;
+            border-bottom: solid 1px @border_color;
+        }
+        .yolo-mobile-header-wrapper {
+            background-color: @white;
+        }
+        .yolo-account {
+            font-size: 0;
+            display: inline-block;
+            vertical-align: middle;
+            a {
+                line-height: initial;
+                i {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+            ul {
+                font-size: 14px;
+            }
+        }
+        .canvas-menu-toggle-wrapper {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .yolo-mobile-header-inner {
+            position: relative;
+            .header-customize {
+                display: block;
+                font-size: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 0;
+                color: #000;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            }
+            .header-customize-item {
+                font-size: 14px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .toggle-icon-wrapper {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .icon-search-menu {
+                display: inline-block;
+                vertical-align: middle;
+                color: var(--text_color);
+                height: 45px;
+                width: 45px;
+                text-align: center;
+                line-height: 45px;
+                padding: 0;
+                font-size: 24px;
+                .transition( all 0.35s ease);
+                &:hover {
+                    color: var(--primary_color);
+                }
+            }
+        }
+        .shopping-cart-wrapper .widget_shopping_cart_content {
+            &:before {
+                content: "";
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .shopping-cart-wrapper .widget_shopping_cart_content .widget_shopping_cart_icon {
+            display: inline-block;
+            vertical-align: middle;
+            top: 0;
+            height: 45px;
+            line-height: 45px;
+        }
+        .shopping-cart-wrapper .widget_shopping_cart_content .widget_shopping_cart_icon>i.wicon {
+            display: inline-block; // border: solid 2px #222;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            line-height: 45px;
+            padding: 0;
+            font-size: 24px;
+            color: var(--text_color);
+            +span {
+                position: absolute;
+                top: 5px;
+                right: 0px;
+                color: @white;
+                background-color: var(--primary_color);
+                border-radius: 100%;
+                padding: 0;
+                width: 17px;
+                height: 17px;
+                line-height: 17px;
+            }
+        }
+    }
+    .yolo-mobile-header-nav {
+        background: #eee;
+        display: none;
+        margin-bottom: 15px;
+        .yolo-nav-mobile-menu {
+            li.current-menu-ancestor>a, li.current-menu-parent>a, li.current-menu-item>a, li.menu-current>a, li>a:hover, li:hover>a, li ul.sub-menu li:hover>a {
+                color: var(--primary_color);
+                >b.caret:before {
+                    color: var(--primary_color);
+                }
+            }
+            ul.sub-menu {
+                background-color: lighten(#eee, 10%);
+                position: relative;
+                padding-left: 0;
+                >li.menu-item {
+                    padding-left: 20px;
+                }
+                >li.menu-item>a {
+                    font-size: calc(var(--menu_font_size) - 3px);
+                }
+                >li.menu-item.sub-menu-open>ul.sub-menu:before {
+                    border-color: transparent transparent lighten(#eee, 15%);
+                }
+            }
+            ul ul.sub-menu {
+                background-color: lighten(#eee, 15%);
+                >li.menu-item.sub-menu-open>ul.sub-menu:before {
+                    border-color: transparent transparent lighten(#eee, 15%);
+                }
+            }
+            ul ul ul.sub-menu {
+                background-color: lighten(#eee, 20%);
+                >li.menu-item.sub-menu-open>ul.sub-menu:before {
+                    border-color: transparent transparent lighten(#eee, 20%);
+                }
+            }
+            ul ul ul ul.sub-menu {
+                background-color: lighten(#eee, 25%);
+            }
+        }
+        form.yolo-search-form-mobile-menu {
+            background-color: #222;
+            padding: 15px;
+            position: relative;
+            input {
+                background-color: #333;
+                border: none;
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                line-height: 1.2;
+                height: auto;
+                padding: 12px;
+                color: @white;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 0;
+                right: 20px;
+                line-height: 1;
+                bottom: 0;
+                margin: auto;
+                font-size: 14px;
+                color: @white;
+            }
+        }
+        ul.yolo-nav-mobile-menu {
+            li.menu-item {
+                font-size: calc(var(--menu_font_size) - 1px);
+                border-bottom: 1px solid fade(@white, 12%);
+                letter-spacing: 0.1em;
+                color: var(--menu_mobile_color);
+                font-family: var(--menu_font);
+                font-weight: var(--menu_font_weight);
+                position: relative;
+                .transition(all 0.2s ease-in-out);
+                >a {
+                    padding: 15px;
+                    display: inline-block;
+                    line-height: 1;
+                    &:hover {
+                        color: var(--primary_color);
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+                >b.menu-caret {
+                    float: right;
+                    right: 0;
+                    position: absolute;
+                    .transition(all 0.3s ease-in-out 0s);
+                    &:before {
+                        font-size: 12px;
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f078";
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 45px;
+                        width: 45px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--primary_color);
+                        .rotate(360deg);
+                    }
+                    &.active {
+                        &:before {
+                            display: inline-block;
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: bold;
+                            content: "\f077";
+                        }
+                    }
+                }
+                &:not(.sub-menu-open):hover {
+                    background-color: lighten(#eee, 3%);
+                }
+                &.sub-menu-open {
+                    border-bottom-width: 0px;
+                    >ul.sub-menu:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -6px;
+                        left: 15px;
+                        z-index: 1;
+                        border-style: solid;
+                        border-width: 0 6px 6px 6px;
+                        border-color: transparent transparent lighten(#eee, 10%);
+                    }
+                }
+            }
+        }
+    }
+    form.yolo-search-form-mobile-menu {
+        display: none;
+    }
+    .yolo-mobile-header-nav.menu-drop-fly {
+        display: block;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+        overflow-x: hidden;
+        width: 280px;
+        left: -280px;
+        border-right: solid 2px var(--primary_color);
+        z-index: 9999;
+        .transition(all 0.3s);
+        &.in {
+            left: 0;
+        }
+        form.yolo-search-form-mobile-menu {
+            display: block;
+        }
+        ul.yolo-nav-mobile-menu {
+            padding: 0;
+        }
+    }
+    .yolo-mobile-header-nav.menu-drop-dropdown {
+        form.yolo-search-form-mobile-menu {
+            display: none;
+        }
+        ul.yolo-nav-mobile-menu {
+            padding: 15px;
+        }
+    } // HEADER MOBILE 1
+    header.header-mobile-1 {
+        .yolo-mobile-header-inner .toggle-icon-wrapper {
+            top: 50%;
+            .transform(translate(0, -45%));
+        }
+    } // HEADER MOBILE 2
+    header.header-mobile-2 {
+        display: block;
+        .yolo-mobile-header-wrapper {
+            background-color: darken(@white, 5%);
+        }
+        .yolo-mobile-header-inner {
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            .header-customize {
+                color: @border_color;
+                right: 0;
+            }
+            .icon-search-menu, .shopping-cart-wrapper .widget_shopping_cart_content .widget_shopping_cart_icon>i.wicon {
+                height: 30px;
+                line-height: 32px;
+                width: 36px;
+                color: @black;
+                &:before {
+                    line-height: 28px;
+                }
+            }
+            .shopping-cart-wrapper .widget_shopping_cart_content {}
+            .toggle-icon-wrapper {
+                position: static;
+            }
+        }
+    } // HEADER MOBILE 3
+    header.header-mobile-3 {
+        .header-logo-mobile {
+            text-align: right;
+        }
+        .yolo-mobile-header-inner .header-customize {
+            left: 50px;
+            right: auto;
+        }
+        .shopping-cart-wrapper {
+            position: static;
+            .widget_shopping_cart_content .cart_list_wrapper {
+                left: -45px;
+                right: auto;
+            }
+        }
+        .yolo-mobile-header-inner .toggle-icon-wrapper {
+            top: 50%;
+            .transform(translate(0, -45%));
+        }
+    } // HEADER MOBILE 4
+    header.header-mobile-4 {
+        .header-logo-mobile {
+            text-align: left;
+        }
+        .yolo-mobile-header-inner .toggle-icon-wrapper {
+            right: 0px;
+            left: auto;
+            top: 50%;
+            .transform(translate(0, -45%));
+        }
+        .yolo-mobile-header-wrapper .header-customize {
+            right: 50px;
+            left: auto;
+        }
+    } // STICKY MOBILE MENU
+    //-----------------------------------
+    .yolo-sticky-wrapper.is-sticky>.yolo-header-container-wrapper {
+        z-index: 997;
+        left: 0;
+        right: 0;
+    }
+    .yolo-sticky-wrapper:not(.is-sticky) {
+        height: auto!important;
+        position: relative!important;
+    }
+    body.menu-mobile-in .yolo-sticky-wrapper.is-sticky>.yolo-header-container-wrapper.menu-drop-fly {
+        left: 280px;
+        right: -280px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .shopping-cart-wrapper .widget_shopping_cart_content .cart_list_wrapper {
+        min-width: 280px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .shopping-cart-wrapper .widget_shopping_cart_content .cart_list_wrapper {
+        min-width: 254px;
+    }
+}

@@ -1,0 +1,108 @@
+.align-center {
+    .mc4wp-form {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+.align-left {
+    .mc4wp-form {
+        margin-right: auto;
+
+        input[type="submit"] {
+            @media (max-width: 900px) {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
+
+.align-right {
+    .mc4wp-form {
+        margin-left: auto;
+
+        input[type="submit"] {
+            @media (max-width: 900px) {
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+
+.mc4wp-form {
+    max-width: 500px;
+
+    .mc4wp-alert {
+        margin-top: 10px;
+        font-size: calc(var(--primary_font_size) - 1px);
+        color: @brand-danger;
+        text-align: center;
+    }
+}
+
+.entry-content .mc4wp-form input[type="submit"] {
+    height: 50px;
+    padding: 10px 40px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    background-color: var(--primary_color);
+    color: @white;
+    line-height: 1;
+    font-size: 18px;
+    font-family: var(--secondary_font);
+    font-weight: var(--secondary_font_weight);
+    .transition(all 300ms ease);
+
+    @media (max-width: 900px) {
+        border-radius: 50px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    &:hover {
+        background-color: var(--heading_color);
+    }
+}
+
+.entry-content .mc4wp-form {
+
+    .mc4wp-form-fields {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-content: center;
+        }
+
+    }
+
+    input[type="email"] {
+        padding-left: 30px;
+        padding-right: 30px;
+        flex-grow: 1;
+        max-width: 100%;
+        color: var(--text_color);
+        font-weight: var(--primary_font_weight);
+        border-style: solid;
+        border-color: var(--heading_color_fade_50);
+        background-color: @white;
+        border-width: 1px 0 1px 1px;
+        border-radius: 50px 0 0 50px;
+        height: 50px;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            border-radius: 50px;
+            border-width: 1px;
+        }
+
+        &:focus {
+            border-color: var(--primary_color);
+            background-color: @white;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+//-----------------------------------
+// HEADER 1
+//-----------------------------------
+@media screen and (min-width:1370px) {
+    header.yolo-main-header.header-1 .yolo-header-nav-wrapper.nav-fullwith {
+        padding-left: var(--header_1_nav_layout_padding);
+        padding-right: var(--header_1_nav_layout_padding);
+    }
+}
+
+.header-1 {
+    position: relative;
+
+    .yolo-header-nav-wrapper {
+        &.text-left {
+            z-index: 10;
+        }
+
+        &.yolo-nav-wrapper {
+            background-color: var(--header_1_nav_bg_color);
+        }
+
+        .header-logo {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            height: var(--header_1_height);
+
+            >a {
+                img {
+                    max-height: var(--header_1_height);
+                }
+            }
+        }
+
+        .fr {
+            .header-customize-right {
+                line-height: var(--header_1_height);
+
+                .search-box-wrapper {
+                    form {
+                        input {
+                            background-color: transparent;
+                            border: 1px solid #eee;
+                            min-width: 370px;
+                        }
+                    }
+                }
+
+                .search-with-category {
+                    @media (min-width: 992px) and (max-width:1024px) {
+                        width: 405px;
+                    }
+                }
+
+                .custom-text-wrapper {
+                    i {
+                        margin-right: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &.sticky-on {
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+        }
+
+        &.sticky-out {
+            background-color: var(--header_1_nav_bg_color);
+        }
+    }
+
+    .yolo-header-wrapper {
+        .yolo-main-menu {
+            >li {
+                color: var(--header_1_nav_text_color);
+
+                >a {
+                    padding: 0;
+                    line-height: 70px;
+                    padding-right: var(--header_1_nav_distance);
+
+                    @media (max-width: @screen-md-max ) {
+                        padding: 20px 10px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-customize {
+        &.header-customize-nav {
+            float: right;
+            height: 70px;
+            line-height: 70px;
+
+            .header-customize-item {
+                margin-left: 20px;
+                height: 70px;
+                color: var(--header_1_nav_text_color);
+            }
+        }
+
+        .header-customize-item {
+
+            float: left;
+        }
+    }
+
+    .header-center {
+        .menu-wrapper {
+            margin: 0 auto;
+        }
+    }
+
+    .yolo-sticky-wrapper.is-sticky {
+        .header-sticky {
+            padding-top: 0px;
+            background-color: var(--header_1_nav_bg_color);
+        }
+    }
+}

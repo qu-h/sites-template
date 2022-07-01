@@ -1,0 +1,144 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.w25 {
+    width: 25%;
+}
+.w50 {
+    width: 50%;
+}
+.w75 {
+    width: 75%;
+}
+.w100 {
+    width: 100%;
+}
+.white-text, .secondary-btn:hover, .secondary-btn:focus {
+        color: @white !important;
+}
+.cat-tag {
+    width: fit-content;
+    margin: 5px 0;
+    top: 25px;
+    left: 25px;
+    padding: 5px 10px;
+    font-size: 13px;
+    z-index: 99;
+}
+.grf-btn-default, .grf-btn-primary, .grf-btn-secondary, .grf-btn-danger, .grf-btn-blank {
+    padding: 8px 15px;
+    border-radius: 100vh;
+    border: 1px solid @Silver_b !important;
+    transition: all ease-in-out .5s !important;
+    background: @Silver_b !important;
+    color: @Dark_l;
+    cursor: pointer;
+    font-size: .9rem;
+    &.-sm {
+        padding: 5px 25px;
+    }
+    &.-md {
+        padding: 8px 25px;
+    }
+    &.-lg {
+        padding: 12px 35px;
+    }
+    &:hover {
+        background: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &.-boxed {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    &.-round {
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+    }
+    &.-max {
+        width: 100%;
+    }
+    &.-curved {
+        border-radius: 4px;
+    }
+}
+
+.grf-btn-primary {
+    background: @Mint_3 !important;
+    border: 1px solid @Mint_3 !important;
+    color: @Silver_l !important;
+    &:hover {
+        color: @Mint_3 !important;
+        background: rgba(0,0,0,0) !important;
+    }
+}
+
+.grf-btn-secondary {
+    background: @Bittersweet_b !important;
+    border: 1px solid @Bittersweet_b !important;
+    color: white;
+    &:hover {
+        color: @Bittersweet_b !important;
+    }
+}
+
+.grf-btn-danger {
+    background: @Ruby_l !important;
+    border: 1px solid @Ruby_l !important;
+    color: white;
+    &:hover {
+        color: @Ruby_l !important;
+    }
+}
+
+.grf-btn-blank {
+    background: none;
+    border: 1px solid @Dark-o1 !important;
+    color: @Grey_3 !important;
+    background: none !important;
+    padding: 8px 20px;
+    &:hover {
+        color: @Ruby_l !important;
+        border-color: @Ruby_b !important;
+    }
+}
+.grf-btn-white {
+    background: @Silver_l !important;
+    border: 1px solid @Silver_l !important;
+    color: @Ruby_b !important;
+    padding: 8px 20px;
+    font-weight: 800;
+    &:hover {
+        color: @Ruby_l !important;
+        border-color: @Ruby_b !important;
+        background: transparent;
+    }
+}
+.grf-btn-boxed {
+    border-radius: 0;
+}
+
+.grf-btn-sm {
+    padding: 4px 15px;
+    font-size: .8rem;
+    width: max-content;
+}
+
+.grf-btn-max {
+    width: 100%;
+}
+
+.grf-btn-curved-md {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+button:focus {
+    outline: none;
+}

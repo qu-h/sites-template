@@ -1,0 +1,277 @@
+//-----------------------------------
+// YOLO TOP BAR
+//-----------------------------------
+.yolo-top-bar {
+    background-color: var(--top_bar_bg_color);
+    color: var(--top_bar_text_color);
+    position: relative;
+    font-size: 14px;
+    line-height: 45px;
+    .container {
+        @media (max-width: 1200px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    .top-sidebar {
+        aside {
+            margin: 0;
+            background-color: transparent;
+            ul {
+                padding: 0 !important;
+            }
+            +aside {
+                margin-left: 30px;
+            }
+        }
+        &.top-bar-right {
+            ul {
+                li {
+                    a {
+                        padding-left: 30px;
+                        &:first-child {
+                            padding-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+            display: inline-block;
+            float: left;
+            padding-right: 30px;
+            &:last-child {
+                padding-right: 0px;
+            }
+            a {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+    }
+    .top-sidebar {
+        .profile-text {
+            padding-right: 10px;
+        }
+        h4.widget-title {
+            display: none;
+        }
+        #wp-calendar caption, #wp-calendar thead th {
+            color: var(--top_bar_text_color);
+        }
+        .widget_nav_menu>div>ul.menu {
+            overflow: visible;
+            border: none;
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            font-size: 14px;
+            li {
+                display: inline-block;
+                position: relative;
+                border: none;
+                color: inherit;
+                &:before {
+                    display: none;
+                }
+                &:hover>ul {
+                    display: block;
+                }
+                >a {
+                    padding: 0;
+                    &:hover {
+                        padding-left: 0;
+                    }
+                }
+            }
+            >li {
+                padding: 0;
+                margin: 0;
+                line-height: 50px;
+                +li {
+                    margin-left: 30px;
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: -15px;
+                        width: 1px;
+                        height: 16px;
+                        margin: auto;
+                    }
+                } // Popup login menu
+                ul {
+                    display: none;
+                    position: absolute;
+                    z-index: 999;
+                    right: 0;
+                    top: 100%;
+                    background-color: var(--top_bar_bg_color);
+                    color: var(--top_bar_text_color);
+                    text-align: left;
+                    margin: 0;
+                    padding: 0 15px;
+                    min-width: 150px;
+                    .box-shadow(2px 5px 5px 2px rgba(0, 0, 0, 0.3));
+                    li {
+                        display: block;
+                        white-space: nowrap;
+                        padding: 8px 0;
+                        margin: 0;
+                        line-height: 28px;
+                    }
+                    li+li {
+                        border-top: solid 1px #f0f0f0;
+                    }
+                    ul {
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .widget.base-primary-color {
+            i.fa, a {
+                color: var(--top_bar_text_color);
+            }
+            &.widget_nav_menu>div>ul.menu>li+li:before, &.separate-left:before, &.separate-right:after {
+                background-color: var(--top_bar_text_color);
+            }
+        }
+        .separate-left {
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -15px;
+                width: 1px;
+                height: 16px;
+                margin: auto;
+            }
+        }
+        .separate-right {
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -15px;
+                width: 1px;
+                height: 16px;
+                margin: auto;
+            }
+        }
+        .widget .custom-dropdown-list>ul li>a {
+            color: #333;
+        }
+        .widget #lang_sel>ul {
+            position: relative;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            >li {
+                padding: 0;
+                display: block;
+                list-style: none;
+                >a:after {
+                    content: "\f107";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    display: inline-block;
+                }
+            }
+            ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 150px;
+                list-style: none;
+                padding: 10px 0;
+                margin: 0;
+                display: none;
+                background-color: #fff;
+                z-index: 999;
+                .box-shadow(2px 3px 5px 2px rgba(0, 0, 0, 0.3));
+                >li {
+                    list-style: none;
+                    padding: 0 15px;
+                    display: block;
+                    line-height: 32px;
+                    img {
+                        padding-right: 5px;
+                    }
+                }
+            }
+            &:hover ul {
+                display: block;
+            }
+        }
+    }
+    .top-bar-left {
+        text-align: left;
+    }
+    .top-bar-right {
+        text-align: right;
+        &.top-sidebar .widget_nav_menu>div>ul.menu ul ul {
+            left: auto;
+            right: 100%;
+        }
+        .yolo-login-button {
+            margin-left: 5px;
+            font-weight: 500;
+        }
+        aside ul {
+            float: right;
+            @media (max-width: 768px) {
+                float: left;
+            }
+        }
+        .widget-social-profile {
+            a {
+                font-size: 0;
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .top-bar-center {
+        text-align: center;
+    }
+}
+//-----------------------------------
+// TOP BAR RESPONSIVE
+//-----------------------------------
+@media screen and (max-width:768px) {
+    .yolo-top-bar {
+        position: relative;
+        z-index: 998;
+        color: var(--top_bar_text_color);
+        background: var(--top_bar_bg_color);
+        .top-bar-left, .top-bar-right {
+            text-align: left;
+        }
+    }
+    .top-bar-right.top-sidebar .widget_nav_menu>div>ul.menu ul ul {
+        right: auto;
+        left: 100%;
+    }
+}
+@media screen and (max-width:479px) {
+    .yolo-top-bar ul.top-bar-info li {
+        display: block;
+        margin-left: 0 !important;
+    }
+}

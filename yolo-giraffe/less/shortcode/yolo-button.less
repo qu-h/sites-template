@@ -1,0 +1,119 @@
+.widget {
+    .giraffe-btn {
+        &.btn-small {
+            min-width: auto;
+        }
+    }
+}
+
+.header-customize {
+    .giraffe-btn {
+        min-width: 160px;
+        padding: 16px 20px;
+    }
+}
+.giraffe-btn {
+    display: inline-block;
+    position: relative;
+    visibility: visible;
+    line-height: 1;
+    font-size: 18px;
+    font-family: var(--secondary_font);
+    font-weight: var(--secondary_font_weight);
+    color: @white;
+    background-color: var(--primary_color);
+    padding: 16px 40px;
+    border-radius: 30px;
+    .transition(all 200ms ease-in-out);
+    box-shadow: 0px 2px 5px rgba(53, 52, 52, 0.3);
+    min-width: 200px;
+    text-align: center;
+    &:focus,
+    &:hover {
+        color: @white;
+        background-color: var(--heading_color);
+        box-shadow: 3px 9px 10px rgba(53, 52, 52, 0.45);
+        transform: scale(1.1);
+    }
+
+    &.btn-small {
+        padding: 11px 10px;
+    }
+
+    &.giraffe-btn-blue {
+        color: @white;
+        background-color: var(--secondary_color);
+
+        &:hover {
+            color: @white;
+            background-color: var(--primary_color);
+        }
+    }
+
+}
+
+.sc-button-wrap {
+    &.align-left {
+        text-align: left;
+    }
+
+    &.align-center {
+        text-align: center;
+    }
+
+    &.align-right {
+        text-align: right;
+    }
+
+    .giraffe-btn {
+        &.size-small {
+            font-size: 14px;
+            padding: 10px 30px;
+        }
+
+        &.size-normal {
+            font-size: 18px;
+            padding: 16px 40px;
+        }
+
+        &.size-large {
+            font-size: 22px;
+            padding: 20px 60px;
+        }
+
+        &.hover-primary {
+
+            &:focus,
+            &:hover {
+                color: @white !important;;
+                background-color: var(--primary_color) !important;;
+            }
+        }
+
+        &.hover-seconds {
+
+            &:focus,
+            &:hover {
+                color: @white !important;;
+                background-color: var(--secondary_color) !important;;
+            }
+        }
+
+        &.hover-heading {
+
+            &:focus,
+            &:hover {
+                color: @white !important;;
+                background-color: var(--heading_color) !important;;
+            }
+        }
+        &.hover-white {
+
+            &:focus,
+            &:hover {
+                color: var(--heading_color) !important;
+                background-color: @white !important;;
+            }
+        }
+    }
+}

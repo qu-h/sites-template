@@ -1,0 +1,68 @@
+// Grid system
+
+.yolo-flex {
+  display: flex !important;
+  &.-wrap {
+    flex-wrap: wrap !important;
+  }
+  &.-col {
+    flex-direction: column !important;
+  }
+  &.-around {
+    justify-content: space-around !important;
+  }
+  &.-between {
+    justify-content: space-between !important;
+  }
+  &.-evenly {
+    justify-content: space-evenly !important;
+  }
+  &.-center {
+    justify-content: center !important;
+  }
+  &.-end {
+    justify-content: flex-end !important;
+  }
+  .fb-1, .fb-2, .fb-3 , .fb-4, .fb-5, .fb-6, .fb-7, .fb-8, .fb-9, .fb-10, .fb-11, .fb-12 {
+    width: 100%;
+  }
+  .fb-1 {
+    flex-basis: calc(100% / 12 * 1);
+  }
+  .fb-2 {
+    flex-basis: calc(100% / 12 * 2);
+  }
+  .fb-3 {
+    flex-basis: calc(100% / 12 * 3);
+  }
+  .fb-4 {
+    flex-basis: calc(100% / 12 * 4);
+  }
+  .fb-5 {
+    flex-basis: calc(100% / 12 * 5);
+  }
+  .fb-6 {
+    flex-basis: calc(100% / 12 * 6);
+  }
+  .fb-7 {
+    flex-basis: calc(100% / 12 * 7);
+    @media (max-width: 1024px) {
+      flex-basis: calc(100%/ 12 * 8);
+    }
+  }
+  .fb-8 {
+    flex-basis: calc(100% / 12 * 8);
+  }
+  .fb-9 {
+    flex-basis: calc(100% / 12 * 9);
+  }
+  .fb-10 {
+    flex-basis: calc(100% / 12 * 10);
+  }
+  .fb-11 {
+    flex-basis: calc(100% / 12 * 11);
+  }
+  .fb-12 {
+    flex-basis: calc(100% / 12 * 12);
+  }
+}

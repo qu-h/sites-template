@@ -1,0 +1,151 @@
+//-----------------------------------
+// HEADER 3
+//-----------------------------------
+@media screen and (min-width:1370px) {
+    header.yolo-main-header.header-3 .yolo-header-nav-wrapper.nav-fullwith {
+        padding-left: var(--header_3_nav_layout_padding);
+        padding-right: var(--header_3_nav_layout_padding);
+    }
+}
+header.header-3 {
+    position: relative;
+    background-color: var(--header_3_nav_bg_color);
+    color: var(--header_3_nav_text_color);
+    .yolo-account {
+        .sub-menu {
+            background-color: var(--menu_sub_bg_color);
+            color: var(--menu_sub_text_color);
+        }
+    }
+    .yolo-header-nav-wrapper {
+        position: relative;
+        height: var(--header_3_height);
+        .transition(all 0.35s ease 0s);
+        .yolo-header-wrapper {
+            .header-left-offcanvas {
+                position: relative;
+                z-index: 2;
+                float: left;
+                .canvas-menu-toggle-wrapper {
+                    padding-right: 70px;
+                }
+            }
+            .header-left {
+                float: left;
+                .header-logo {
+                    position: relative;
+                    z-index: 1;
+                    display: table;
+                    height: var(--header_3_height);
+                    a {
+                        display: table-cell;
+                        vertical-align: middle;
+                        img {
+                            max-height: var(--header_3_height);
+                            @media(max-width: @screen-md-max) {
+                                max-width: 160px;
+                            }
+                        }
+                    }
+                }
+            }
+            .header-right {
+                float: right;
+                .menu-wrapper {
+                    float: left;
+                    .navbar-nav {
+                        >li {
+                            >a {
+                                line-height: var(--header_3_height);
+                                padding-top: 0;
+                                padding-bottom: 0;
+                                padding-left: var(--header_3_nav_distance);
+                                padding-right: var(--header_3_nav_distance);
+                                @media(max-width: 1199px) {
+                                    padding:0 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-customize {
+                    display: inline-block;
+                    line-height: var(--header_3_height);
+                }
+            }
+        }
+        &.sticky-in {
+            .transition(all 0s ease 0s);
+        }
+        &.sticky-on {
+            height: 70px;
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+            .container {
+                .yolo-header-wrapper {
+                    .header-left-offcanvas {
+                        .header-customize {
+                            height: 70px;
+                        }
+                    }
+                }
+                .header-left {
+                    .header-logo {
+                        line-height: 70px;
+                        height: 70px;
+                    }
+                }
+                .header-right {
+                    .menu-wrapper {
+                        .navbar-nav {
+                            >li {
+                                >a {
+                                    line-height: 70px;
+                                }
+                            }
+                        }
+                    }
+                    .header-customize {
+                        line-height: 70px;
+                    }
+                }
+            }
+        }
+        &.sticky-out {
+            height: 70px;
+            box-shadow: none;
+            .container {
+                .yolo-header-wrapper {
+                    .header-left-offcanvas {
+                        .header-customize {
+                            height: 70px;
+                        }
+                    }
+                }
+                .header-left {
+                    .header-logo {
+                        height: 70px;
+                    }
+                }
+                .header-right {
+                    .menu-wrapper {
+                        .navbar-nav {
+                            >li {
+                                >a {
+                                    line-height: 70px;
+                                }
+                            }
+                        }
+                    }
+                    .header-customize {
+                        line-height: 70px;
+                    }
+                }
+            }
+        }
+    }
+    .yolo-sticky-wrapper.is-sticky {
+        .header-sticky {
+            background-color: var(--header_3_nav_bg_color);
+        }
+    }
+}

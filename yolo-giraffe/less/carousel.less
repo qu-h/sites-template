@@ -1,0 +1,133 @@
+.yolo-data-slider {
+    position: relative;
+
+}
+
+.owl-carousel {
+    
+    .owl-next,
+    .owl-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 48px;
+        color: var(--text_color_fade_60);
+        opacity: 0;
+        transition: all ease-in-out .3s;
+        transition-delay: .2s;
+        z-index: 99;
+    }
+
+    .owl-prev {
+        left: -40px;
+
+        &:hover {
+            color: var(--primary_color);
+        }
+    }
+
+    .owl-next {
+        right: -40px;
+
+        &:hover {
+            color: var(--primary_color);
+        }
+    }
+
+    &:hover {
+        .owl-prev {
+            left: -15px;
+            opacity: 1;
+        }
+
+        .owl-next {
+            right: -15px;
+            opacity: 1;
+        }
+    }
+}
+
+.owl-carousel.owl-loaded {
+    .owl-nav .disabled {
+        opacity: 0;
+    }
+    article.class-item-wrap .loop-item-wrap {
+        // box-shadow: 0 10px 20px rgba(229, 229, 229, 0.8);
+    }
+
+    article.teacher-item-wrap .teacher-item {
+        box-shadow: 0 10px 20px rgba(229, 229, 229, 0.8);
+    }
+
+    .owl-item {
+        .loop-item-company {
+            img {
+                display: inline-block;
+                max-width: 100px;
+            }
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        margin-top: 15px;
+
+        .owl-dot {
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            outline: 0;
+            border: none;
+
+            &.active,
+            &:hover {
+                span {
+                    background-color: var(--primary_color_fade_70);
+                }
+            }
+
+            span {
+                width: 8px;
+                height: 8px;
+                background-color: darken(@border_color, 10%);
+                border-radius: 50%;
+                display: block;
+                margin: 4px;
+            }
+        }
+    }
+
+    div.owl-nav {
+        text-align: center;
+
+        button {
+
+            &.owl-prev,
+            &.owl-next {
+                height: 35px;
+                display: inline-block;
+                width: 35px;
+                outline: none;
+                transition: all 0.3s ease-in-out;
+                .border-radius(50%);
+                background-color: @white;
+                position: absolute;
+                top: 35%;
+
+                &:hover {
+                    background-color: var(--primary_color);
+                    border-color: var(--primary_color);
+                    color: @white;
+                }
+            }
+
+            &.owl-prev {
+                left: 0;
+            }
+
+            &.owl-next {
+                right: 0;
+            }
+        }
+    }
+}

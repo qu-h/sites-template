@@ -1,0 +1,82 @@
+@media screen and (min-width:1370px) {
+    header.yolo-main-header.header-2 .yolo-header-nav-wrapper.nav-fullwith {
+        padding-left: var(--header_2_nav_layout_padding);
+        padding-right: var(--header_2_nav_layout_padding);
+    }
+}
+header.header-2 {
+    color: var(--header_2_nav_text_color);
+    .yolo-header-customize {
+        display: table;
+        width: 100%;
+        font-family: var(--menu-font);
+        .yolo-custom-left, .yolo-custom-right, .header-logo {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .yolo-custom-left {
+            text-align: left;
+            width: 35%;
+        }
+        .yolo-custom-right {
+            text-align: right;
+            width: 35%;
+        }
+    }
+    .header-logo {
+        height: var(--header_2_height);
+        text-align: center;
+        width: 30%;
+        a {
+            img {
+                max-height: var(--header_2_height);
+            }
+        }
+    }
+    &.header-float {
+        .header-customize-left, .header-customize-right {
+            color: @white;
+        }
+    }
+    .header-customize-left, .header-customize-right {
+        color: var(--text_color);
+    }
+    .yolo-header-nav-wrapper {
+        background-color: var(--header_2_nav_bg_color);
+        .yolo-header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .header-left {
+                .menu-wrapper {
+                    #main-menu {
+                        float: none;
+                        >li {
+                            display: inline-block;
+                            float: none;
+                            >a {
+                                padding-left: var(--header_2_nav_distance);
+                                padding-right: var(--header_2_nav_distance);
+                            }
+                            ul {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                .header-customize-nav {
+                    .header-customize-item {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        &.sticky-on {
+            background-color: var(--header_2_nav_bg_color);
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+        }
+        &.sticky-out {
+            background-color: var(--header_2_nav_bg_color);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+
+.yolo_class {
+    .single-post-gallery {
+        margin-bottom: 30px;
+    }
+}
+.single-post-gallery {
+    .post-thumbnail {
+        img {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+    .paging-wrap {
+        margin-top: 20px;
+        padding: 0 50px;
+        .owl-stage {
+            margin: 0 auto;
+        }
+        .owl-item {
+            &.synced {
+                padding: 5px;
+                border: 2px solid var(--primary_color);
+            }
+        }
+        &:hover {
+            .owl-nav {
+                opacity: 1;
+            }
+        }
+        .owl-nav {
+            opacity: 1;
+            .transition( all 0.35s ease);
+            >div {
+                .translateY(-50%);
+                top: 50%;
+                position: absolute;
+                padding: 7px 10px;
+                line-height: 1;
+                background-color: fade(@black, 30%);
+                color: @white;
+                .transition( all 0.35s ease);
+                &:hover {
+                    background-color: var(--primary_color);
+                }
+                &.owl-next {
+                    right: -50px;
+                }
+                &.owl-prev {
+                    left: -50px;
+                }
+            }
+        }
+    }
+}

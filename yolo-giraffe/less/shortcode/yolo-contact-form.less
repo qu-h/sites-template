@@ -1,0 +1,182 @@
+.yolo-sc-contact-form {
+
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+        border: none;
+        padding: 0;
+        color: var(--primary_color);
+    }
+
+    &.style1 {
+        @media screen and(min-width: 768px) {
+            height: 305px;
+        }
+
+        @media screen and(min-width: 1200px) {
+            height: 100%;
+        }
+
+        form {
+            padding: 18px 0;
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                background-color: transparent;
+                border-bottom: 1px solid @white;
+                padding-left: 0px;
+                resize: none;
+                width: 100%;
+                color: @white;
+                margin: 6px 0px;
+
+                &:focus {
+                    border-color: var(--primary_color);
+                }
+            }
+
+            textarea {
+                height: 120px;
+            }
+
+            input[type=submit] {
+                text-transform: uppercase;
+                border: none;
+                background-color: transparent;
+                color: @white;
+                padding: 5px 0px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--primary_color);
+                }
+            }
+
+            ::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: @white  !important;
+                opacity: 1;
+            }
+
+            :-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: @white  !important;
+                opacity: 1;
+            }
+
+            ::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: @white  !important;
+                opacity: 1;
+            }
+
+            :-ms-input-placeholder {
+                /* Internet Explorer 10+ */
+                color: @white  !important;
+                opacity: 1;
+            }
+
+            .wpcf7-form-control {
+                &.btn-submit {}
+            }
+        }
+    }
+
+    &.style2 {
+        form {
+            padding: 60px;
+            background-color: #ffd339;
+            border-radius: 10px;
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                display: block;
+                width: 100%;
+                border: none;
+                color: @white;
+                background-color: fade(@black, 15%);
+                height: 54px;
+                padding: 17px 25px;
+                border-radius: 30px;
+                font-weight: 600;
+            }
+
+            textarea {
+                min-height: 135px;
+                border-radius: 10px;
+            }
+
+            ::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: @white;
+                opacity: 1;
+            }
+
+            :-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: @white;
+                opacity: 1;
+            }
+
+            ::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: @white;
+                opacity: 1;
+            }
+
+            :-ms-input-placeholder {
+                /* Internet Explorer 10+ */
+                color: @white;
+                opacity: 1;
+            }
+
+            .button-submit {
+                text-align: center;
+            }
+
+            .wpcf7-form-control-wrap {
+                display: block;
+                margin-bottom: 30px;
+
+                .wpcf7-list-item {
+                    margin: 0 0 0 0;
+                    line-height: 1;
+                }
+            }
+
+            .wpcf7-list-item-label {
+                color: @white;
+                font-weight: 600;
+
+                a {
+                    color: @white;
+                    text-decoration: underline;
+                }
+            }
+
+            .wpcf7-submit {
+                border: none;
+                line-height: 1;
+                visibility: visible;
+                font-size: 18px;
+                font-family: var(--secondary_font);
+                font-weight: var(--secondary_font_weight);
+                color: @white;
+                background-color: var(--primary_color);
+                padding: 16px 40px;
+                border-radius: 30px;
+                .transition(all 200ms ease-in-out);
+                box-shadow: 0px 2px 5px rgba(53, 52, 52, 0.3);
+                
+                &:focus,
+                &:hover {
+                    color: @white;
+                    background-color: var(--heading_color);
+                    box-shadow: 3px 9px 10px rgba(53, 52, 52, 0.45);
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

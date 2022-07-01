@@ -1,0 +1,298 @@
+// YOLO FOOTER
+// 
+// Hide main footer
+body.single-yolo_footer footer {
+    display: none;
+}
+
+.archive,
+.search,
+.blog {
+    .yolo-footer-wrapper.footer_blank {
+        margin-top: 0;
+    }
+}
+
+.single-product,
+.single-post {
+    .yolo-footer-wrapper.footer_blank {
+        margin-top: 0;
+    }
+}
+
+#yolo-footer-wrapper {
+    position: relative;
+    z-index: -1;
+
+    @media (max-width: 1200px) {
+        z-index: 1;
+    }
+
+    .yolo-footer-wrapper {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+
+        @media (max-width: 1200px) {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+        }
+
+        &.footer_blank {
+            position: relative;
+            margin-top: 80px;
+        }
+    }
+
+}
+
+.yolo-footer-wrapper.footer_blank {
+    margin-top: 80px;
+    background-color: #111;
+    color: fade(@white, 90%);
+
+    .footer-credits {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            margin: 15px 0;
+            color: @white;
+            font-size: 15px;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+// Footer-1
+.yolo-footer-wrapper.footer-1 {
+    .link_left {
+        a {
+            display: inline-block;
+            margin-right: 30px;
+            font-weight: 600;
+            color: #666;
+
+            &:hover {
+                color: var(--primary_color);
+            }
+
+            @media(max-width:1299px) {
+                margin-right: 15px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        @media(max-width:767px) {
+            text-align: center !important;
+        }
+    }
+
+    h6 {
+        @media(max-width: 767px) {
+            text-align: center !important;
+        }
+    }
+}
+
+.title-center .widget-title {
+    text-align: center;
+}
+
+// Footer-2
+ul.footer-2 {
+    padding: 0px;
+
+    li {
+        list-style: none;
+
+        a {
+            position: relative;
+            display: inline-block;
+            padding-left: 15px;
+
+            &:before {
+                content: "\f0da";
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                left: 0px;
+            }
+
+            &:hover {
+                color: @grf-2;
+            }
+        }
+    }
+}
+
+.yolo-footer-wrapper {
+    .widget_nav_menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+            li {
+                margin-bottom: 5px;
+                padding-left: 16px;
+                position: relative;
+
+                &:before {
+                    background: fade(@white, 90%);
+                    height: 1px;
+                    width: 7px;
+                    content: '';
+                    left: 0;
+                    top: 12px;
+                    position: absolute;
+                    content: '';
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: var(--primary_color);
+                    }
+                }
+            }
+        }
+    }
+
+    &.footer-2 {
+        .footer-2-top {
+            border-bottom: 2px solid @grf-1;
+        }
+    }
+}
+
+// Footer-4
+.yolo-footer-wrapper {
+    &.footer-4 {
+        .wpb_content_element {
+            margin-bottom: 0px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            li.menu-item {
+                display: inline-block;
+                padding-right: 45px;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                &:last-child {
+                    padding-right: 0px;
+                }
+            }
+
+            @media screen and(min-width: 320px) {
+                margin-bottom: 30px;
+            }
+
+            @media screen and(min-width: 768px) {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+// Menu footer-1
+.menu-footer-1 {
+    &.wpb_content_element {
+        margin: 0px;
+    }
+
+    &.center {
+        text-align: center;
+    }
+
+    div ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px !important;
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+            border-right: 2px solid @white;
+            line-height: 16px;
+
+            @media screen and (max-width: 991px) {
+                padding: 0 10px;
+            }
+
+            &:first-child {
+                padding-left: 0px;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                a {
+                    color: @grf-3;
+                }
+            }
+
+            a {
+                color: @white;
+                font-size: 16px;
+                line-height: 16px;
+                font-family: var(--secondary_font);
+                font-weight: var(--secondary_font_weight);
+            }
+        }
+    }
+
+    @media screen and (min-width: 320px) {
+        margin-bottom: 30px;
+        text-align: center !important;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0px;
+        text-align: left !important;
+    }
+}
+
+.copy-right {
+    @media screen and(min-width: 320px) {
+        text-align: center !important;
+    }
+
+    @media screen and(min-width: 768px) {
+        display: block;
+        text-align: right !important;
+    }
+}
+
+.yolo-footer-wrapper {
+    .widget {
+        background-color: transparent;
+        margin-bottom: 0;
+    }
+}

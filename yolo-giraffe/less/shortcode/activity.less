@@ -1,0 +1,73 @@
+.sc-activity-wrap {
+    margin: 0;
+}
+.yolo-sc-activity {
+    @media (min-width: 768px) and (max-width: 991px) {
+        &.col-sm-6 {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    position: relative;
+    padding: 0 20px;
+    &:before {
+        content: '';
+        width: 5px;
+        height: 35px;
+        left: 0;
+        top: 15px;
+        position: absolute;
+        background-color: var(--primary_color);
+        border-radius: 10px;
+    }
+    .activity-item {
+        cursor: pointer;
+        z-index: 2;
+        position: relative;
+        p {
+            margin-top: 0;
+        }
+        .title {
+            font-size: 26px;
+            margin-top: 16px;
+            display: inline-block;
+            .transition(all 300ms ease);
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--primary_color);
+                .transition (all 400ms ease);
+            }
+        }
+    }
+    .activity-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .number-bg {
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        font-size: 47px;
+        line-height: 35px;
+        right: 35px;
+        margin: 0;
+        color: #ddd;
+    }
+    &:hover {
+        .activity-item .title {
+            color: var(--primary_color);
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}

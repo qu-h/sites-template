@@ -1,0 +1,96 @@
+.yolo-sc-contact-info {
+
+    @media (max-width: 768px) {
+        margin-bottom: 60px;
+    }
+    .contact-info-title {
+        text-transform: uppercase;
+    }
+    .contact-info-desc {
+        margin-bottom: 30px;
+    }
+    &.style1 {
+        .contact-info-item {
+            width: 100%;
+            .info-item-content {
+                display: flex;
+                .icon-wrap {
+                    padding-right: 15px;
+                    span {
+                        width: 20px;
+                        text-align: center;
+                    }
+                }
+                .icon-content {
+                    display: flex;
+                    margin-bottom: 10px;
+                    .icon-label {
+                        padding-right: 3px;
+                    }
+                    .icon-label, .icon-content {
+                        font-size: 14px;
+                        margin: 0;
+                        font-family: var(--primary_font);
+                    }
+                }
+            }
+        }
+        .contact-info-social {
+            display: block;
+            position: relative;
+            width: 100%;
+            ul.icon-list {
+                position: relative;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                li.icon-item {
+                    list-style: none;
+                    display: inline-block;
+                    float: left;
+                    padding: 0 10px;
+                    text-align: center;
+                    margin-right: 15px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    background: #333333;
+                    color: @white;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    a {
+                        &:hover {
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style2 {
+        .info-item-content {
+            display: flex;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            align-items: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .transition( all 300ms ease);
+            .icon-wrap {
+                padding-right: 25px;
+            }
+            .icon-label, .icon-content {
+                margin: 0px;
+                color: @white;
+            }
+            &:hover {
+                box-shadow: 3px 9px 10px rgba(53, 52, 52, 0.45);
+            }
+        }
+    }
+}
+// Style title page contact

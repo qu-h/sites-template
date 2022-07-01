@@ -1,0 +1,79 @@
+.character  {
+
+	position: relative;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	border-radius: 5px 5px 5px 5px;
+	margin: 5px;
+
+	background-color: @bg_green;
+	box-shadow: 0px 4px 0px 0px @bg_green_shadow;
+
+	&.blue {
+		background-color: @bg_blue;
+		box-shadow: 0px 4px 0px 0px @bg_blue_shadow;
+	}
+
+	&.red {
+		background-color: @bg_red;
+		box-shadow: 0px 4px 0px 0px @bg_red_shadow;
+	}
+	&.green {
+		background-color: @bg_green;
+		box-shadow: 0px 4px 0px 0px @bg_green_shadow;
+	}
+	&.yellow {
+		background-color: @bg_yellow;
+		box-shadow: 0px 4px 0px 0px @bg_yellow_shadow;
+	}
+	&.violet {
+		background-color: @bg_violet;
+		box-shadow: 0px 4px 0px 0px @bg_violet_shadow;
+	}
+	&.orange {
+		background-color: @bg_orange;
+		box-shadow: 0px 4px 0px 0px @bg_orange_shadow;
+	}
+	.wr {
+		font-size: 50px;
+	}
+	.r {
+		bottom: 0;
+	    font-size: 15px;
+	    position: absolute;
+	    right: 5px;
+	}
+	.write,
+	.listen {
+		position: absolute;
+		left: 2px;
+		cursor: pointer;
+		&:HOVER{
+			border : 1px solid #fff;
+			left: 1px;
+		}
+	}
+	.write {
+		bottom: 2px;
+
+		&:HOVER{
+			bottom: 1px;
+		}
+	}
+	.listen{
+		top: 2px;
+		&:HOVER{
+			top: 1px;
+		}
+	}
+
+    ruby {
+      color: white;
+      top: 10px;
+      position: relative;
+      rt {
+        font-size: 15px;
+      }
+    }
+}

@@ -1,5 +1,6 @@
 .idea/
 .vscode
+node_modules
 CoreUI
 ciznews
 beautifier.io

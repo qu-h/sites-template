@@ -1,0 +1,26 @@
+{
+  "name": "site-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "file-exists": "^5.0.1",
+    "file-extension": "^4.0.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "latest",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "latest",
+    "gulp-less": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "orchestrator": "^0.3.8",
+    "uglify-es": "latest"
+  }
+}

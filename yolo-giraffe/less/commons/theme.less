@@ -1,0 +1,114 @@
+// For theme class
+
+.hoverable {
+  transition: box-shadow .25s;
+  &:hover {
+    box-shadow: 0 8px 17px 0 fade(@black, 20%), 0 6px 20px 0 fade(@black, 19%); }
+}
+
+.card-hover {
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition: all .25s ease;
+    &:hover {
+      webkit-transform: translateY(-4px) scale(1.01);
+      -moz-transform: translateY(-4px) scale(1.01);
+      -ms-transform: translateY(-4px) scale(1.01);
+      -o-transform: translateY(-4px) scale(1.01);
+      transform: translateY(-4px) scale(1.01);
+      -webkit-box-shadow: 0 14px 24px rgba(62, 57, 107, 0.1);
+      box-shadow: 0 14px 24px rgba(62, 57, 107, 0.1);
+    }
+}
+
+.card {
+  .card-title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.card {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: all .25s;
+    border-radius: 2px;
+}
+
+.card-content {
+    padding: 24px;
+    border-radius: 0 0 2px 2px;
+    p {
+      margin-bottom: 10px;
+    }
+}
+
+.card {
+  box-shadow: 0 2px 2px 0 fade(@black, 1%), 0 3px 1px -2px fade(@black, 2%), 0 1px 5px 0 fade(@black, 3%);
+  border: none;
+  .card-content {
+    .card-title {
+      display: block;
+      line-height: 24px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+    }
+    .card-subtitle {
+      margin-bottom: 15px;
+      margin-top: -5px;
+      font-size: 15px;
+      font-weight: 300;
+      color: #9098ac;
+    }
+  }
+}
+
+// For counter
+.icon-center {
+  flex-direction: column;
+  text-align: center;
+}
+.icon-right {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.job-quick-view {
+  .jqv__topbar {
+    padding-bottom: 10px;
+  }
+  .jqv__header {
+    .jqv__title {
+      font-size: 18px;
+    }
+  }
+  .jqv__overview {
+
+  }
+}
+#jobQuickView {
+  .modal-md {
+    max-width: 800px !important;
+  }
+}
+
+.vlc-modal {
+  .modal {
+    top: 10%;
+  }
+  .login-modal {
+    .modal-dialog {
+      max-width: 700px;
+    }
+  }
+  .modal-container {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .sc-btn {
+    width: 35px;
+    height: 35px;
+    color: @Mint_3;
+  }
+}

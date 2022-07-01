@@ -1,0 +1,95 @@
+.yolo-sc-counter {
+    position: relative;
+    padding: 40px 0px 40px;
+
+    .sc-counter-wrap {
+        width: 100%;
+    }
+
+    .content-inner {
+        float: left;
+        position: relative;
+        text-align: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+
+        @media (max-width: 900px) {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .gr-number-counter {
+            display: block;
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: 3px;
+            font-family: var(--secondary_font);
+            color: var(--primary_color);
+            .transition(all 0.35s ease);
+
+            @media (max-width: 1024px) {
+                font-size: 42px;
+            }
+        }
+
+        img {
+            width: auto;
+            max-width: 170px;
+            margin: 0 auto;
+        }
+
+        .desc {
+            line-height: 1;
+            font-size: 18px;
+            margin-top: 10px;
+            letter-spacing: 1px;
+
+            @media (max-width: 1024px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.style_2 {
+        .content-inner {
+            position: relative;
+
+            .counter-icon {
+                width: 65px;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                left: 0;
+                right: 0;
+                .transition (all 500ms ease);
+            }
+
+            .gr-number-counter {
+                margin: 10px 0;
+
+            }
+
+            .content-meta {
+                padding-top: 55px;
+                transform: translateY(0);
+                .transition (all 600ms ease-in-out);
+            }
+
+            .desc {
+                margin: 0;
+            }
+
+            &:hover {
+                .counter-icon {
+                    width: 200px;
+                    opacity: 0.1;
+                }
+
+                .content-meta {
+                    transform: translateY(-50px);
+                }
+            }
+        }
+    }
+}
