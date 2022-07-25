@@ -1,3 +1,18 @@
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins/background-variant";
+@import "../../../../node_modules/bootstrap/scss/mixins/hover";
+@import "../../../../node_modules/bootstrap/scss/mixins/deprecate";
+@import "../../../../node_modules/bootstrap/scss/mixins/text-emphasis";
+@import "../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../../node_modules/bootstrap/scss/mixins/border-radius";
+@import "../../../../node_modules/bootstrap/scss/mixins/badge";
+@import "../../../../node_modules/bootstrap/scss/mixins/buttons";
+@import "../../../../node_modules/bootstrap/scss/mixins/gradients";
+@import "../../../../node_modules/bootstrap/scss/mixins/box-shadow";
+
+
+
+
 @import 'mixins';
 @import 'helpers';
 @import 'colors';
