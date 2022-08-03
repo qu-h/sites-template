@@ -4736,6 +4736,15 @@ article > section > .row {
   padding: 0; }
   .navbar-brand img {
     max-height: 2.375rem; }
+  .navbar-brand.logo-full {
+    position: relative; }
+    .navbar-brand.logo-full img {
+      width: 100%;
+      max-height: none; }
+    .navbar-brand.logo-full .badge {
+      position: absolute;
+      bottom: -30px;
+      right: -10px; }
 
 .navbar-toggler {
   padding: 0;
@@ -4744,10 +4753,6 @@ article > section > .row {
 .navbar-vertical {
   display: block;
   padding: 0; }
-  .navbar-vertical .navbar-collapse {
-    margin-top: 30px;
-    margin-right: -30px;
-    margin-left: -30px; }
   .navbar-vertical .nav-vertical {
     padding: 0; }
 
@@ -5179,7 +5184,10 @@ article > section > .row {
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     transition-delay: 0s;
-    color: #000; }
+    color: #000;
+    text-decoration: none; }
+  .breadcrumb-item.active a {
+    color: #999999; }
 
 .breadcrumb-back {
   -webkit-transition: all 0.2s;
@@ -5286,7 +5294,8 @@ article > section > .row {
     -moz-transition-delay: 0s;
     transition-delay: 0s;
     display: inline-block;
-    color: #999999; }
+    color: #999999;
+    text-transform: capitalize; }
     .nav .nav-link.active {
       color: #111111; }
   .nav .lavalamp-object {

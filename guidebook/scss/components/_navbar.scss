@@ -52,6 +52,20 @@
 	img {
 		max-height: 2.375rem;
 	}
+
+  &.logo-full{
+    position: relative;
+    img{
+      width: 100%;
+      max-height: none;
+    }
+
+    .badge {
+      position: absolute;
+      bottom: -30px;
+      right: -10px;
+    }
+  }
 }
 
 .navbar-toggler {
@@ -68,11 +82,11 @@
 	padding: 0;
 
 
-    .navbar-collapse {
-        margin-top: $card-spacer-x;
-        margin-right: -$card-spacer-x;
-        margin-left: -$card-spacer-x;
-    }
+    //.navbar-collapse {
+    //    margin-top: $card-spacer-x;
+    //    margin-right: -$card-spacer-x;
+    //    margin-left: -$card-spacer-x;
+    //}
 
     .nav-vertical {
         padding: 0;
