@@ -1225,13 +1225,14 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-body > section,
-body > footer {
-  position: relative;
-  margin: 0 auto;
-  padding: 6.25rem 0;
-  overflow: hidden; }
+  body.body-doc {
+    background-color: #f8f8f8; }
+  body > section,
+  body > footer {
+    position: relative;
+    margin: 0 auto;
+    padding: 6.25rem 0;
+    overflow: hidden; }
 
 .row + .row {
   margin-top: 2.5rem; }

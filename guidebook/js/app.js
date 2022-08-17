@@ -95,7 +95,8 @@
       folder.on("click", function(a) {
           $(this).children('ul').slideToggle(400, function() {
               $(this).parent("li").toggleClass("open")
-          }), a.stopPropagation()
+          });
+          a.stopPropagation();
       })
 
       file.on('click', function(b){

@@ -1,16 +1,15 @@
-//
-// Content
-//
 
+// page
 body {
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
+
+	&.body-doc {
+		background-color: #f8f8f8;
+	}
 
 
-// page
-body {
 	> section,
 	> footer {
 		position: relative;
